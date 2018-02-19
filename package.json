@@ -1,0 +1,13 @@
+{
+  "name": "island-animation",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "browserify src/island.js -t babelify --outfile dist/island.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+# Directories
+node_modules/
+island-animation-ai/
+
+# Files
+.DS_Store
+.jshintrc
+images/.DS_Store
