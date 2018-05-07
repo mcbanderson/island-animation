@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+before_script:
+- npm install -g gulp-cli
+script: gulp
+deploy:
+  provider: s3
+  access_key_id: AKIAI46PG2F5VPEPA3CQ
+  secret_access_key:
+    secure: Hoy/QeUCYXRfnNoHm5/JpBFwPAsW78pd3qSZd1l5vXreUmFnXspRaQZqX2mwipfSk2DiVp6/v/6lTIQ2QBqJqx6pm0/PXGJ2QAP0c9Bnqz4w+3teuA4ml/qqdXE1SEYCBefbMIhSYrFNXA/+IfIFSkFT5WsFVjQWpTOFCTrsr+jvrELzfjzb1CPmG/w0ci3nr4Tcs+hQP6/6IEoP2FnB99Fc6Cl+EmNehQXnC7CwS5VUE9XOhYMLxYr1nP8qJfgeCnmitT1MrWzQfqIIblTz2RB9GUmaPFzdbE8SXVXVPYyyi6SxIUpqt2rEKZMZskaG+AKrNlhJbgFK3RgC+vWPI3qF1uZtVV/GxhTNmErrQP80vjTvHjFVBY3nVP88PCHODe+4/r4ae2WIBP686LmoUtMuRV4Z8fpgJKc8ibXDLavcqSjhQI+R6qPSE2THMS6Za/IBFIYOk18akqVYSvfXgCdUk/BnCIANzwv5MDXNZSILC/uQH/SwgqiaRnOAzx/lG1lPCtOd3qs5Ow9dDgb2Yx3fRyD12PoyRyyAVzPgI2Y06P9i2LPSKVncWMDucxvTmfotK0SgWI48+WICwix51RCOWebBQAjLHYSw1YzHBdVMzDcraw++VUe1nU/0bsWnu1UakEVn2RoisfvduzWK5dsOqFUh2VOSVmfYW4mNA18=
+  bucket: islandanimation.mcbanderson.com
+  acl: public_read
+  skip_cleanup: true
+  local_dir: dist
+  region: us-east-1

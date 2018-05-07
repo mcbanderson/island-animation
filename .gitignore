@@ -1,6 +1,7 @@
 # Directories
 node_modules/
 island-animation-ai/
+dist/
 
 # Files
 .DS_Store

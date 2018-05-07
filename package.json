@@ -1,6 +1,10 @@
 {
   "name": "island-animation",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcbanderson/island-animation.git"
+  },
   "scripts": {
     "build": "browserify src/island.js -t babelify --outfile dist/island.js"
   },
@@ -8,6 +12,9 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0"
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.0",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
