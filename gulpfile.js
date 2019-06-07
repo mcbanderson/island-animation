@@ -3,12 +3,10 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 
-gulp.task('default', ['copy', 'browserify']);
-
 gulp.task('copy', function () {
     gulp.src('./src/images/*')
         .pipe(gulp.dest('./dist/images'));
-    gulp.src('./src/index.html')
+    return gulp.src('./src/index.html')
         .pipe(gulp.dest('./dist'));
 });
 
@@ -23,6 +21,8 @@ gulp.task('browserify', function () {
             .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('default', gulp.series('copy', 'browserify'));
+
 gulp.task('watch', function() {
-    gulp.watch('./src/**/*', ['default']);
+    gulp.watch('./src/**/*', gulp.series('default'));
 });
